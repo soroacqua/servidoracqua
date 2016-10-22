@@ -15,7 +15,7 @@ var Noticia = require('../models/noticias');
 });*/
 
 Noticia.methods(['get','put','post','delete']);
-Noticia.register(router,'/noticiass');
+Noticia.register(router,'/noticias');
 
 
 module.exports = router;
