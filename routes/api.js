@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var Noticia = require('../models/noticias');
-
+var noticias = require('../models/noticias');
+var Noticia = noticias.noticia;
+var Ra = noticias.ra;
+var Fis = noticias.fisico;
 //rota especial
 /*Noticia.route('titulo',{
   detail:true,
@@ -16,6 +18,9 @@ var Noticia = require('../models/noticias');
 
 Noticia.methods(['get','put','post','delete']);
 Noticia.register(router,'/noticias');
-
+Ra.methods(['get','put','post','delete']);
+Ra.register(router,'/ra');
+Fis.methods(['get','put','post','delete']);
+Fis.register(router,'/fisico');
 
 module.exports = router;
