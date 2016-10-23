@@ -11,8 +11,9 @@ var app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-
-app.use('/api',require('./routes/api'));
 app.use(cors());
+app.use('/api',require('./routes/api'));
+
+
 app.listen( process.env.PORT || 3000);
 console.log('api na porta 3000');
