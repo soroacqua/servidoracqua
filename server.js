@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-mongoose.connect('mongodb://teste:teste@ds015924.mlab.com:15924/soroacqua');
+mongoose.connect('mongodb://localhost');
 
 
 var app = express();
